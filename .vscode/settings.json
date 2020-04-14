@@ -3,14 +3,6 @@
     "latex-workshop.latex.autoBuild.run": "onFileChange",
     "editor.wordSeparators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?　、。「」【】『』（）！？てにをはがのともへでや",
     "latex-workshop.latex.tools": [
-        // latexmk を利用した uplatex によるビルドコマンド
-        {
-          "name": "Latexmk (upLaTeX)",
-          "command": "latexmk",
-          "args": [
-            "-f", "-gg", "-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOC%"
-          ]
-        },
         // latexmk を利用した platex によるビルドコマンド
         // 古い LaTeX のテンプレートを使いまわしている (ドキュメントクラスが jreport や jsreport ) 場合のため
         {
@@ -19,23 +11,31 @@
           "args": [
             "-f", "-gg", "-pv", "-latex='platex'", "-latexoption='-kanji=utf8 -no-guess-input-env'", "-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOC%"
           ]
+        },  
+      // latexmk を利用した uplatex によるビルドコマンド
+        {
+          "name": "Latexmk (upLaTeX)",
+          "command": "latexmk",
+          "args": [
+            "-f", "-gg", "-synctex=1", "-interaction=nonstopmode", "-file-line-error", "%DOC%"
+          ]
         },
     ],
 
     // latex-workshop.latex.recipes: Recipe の定義
     "latex-workshop.latex.recipes": [
-        // LaTeX(upLaTeX) で書かれた文書のビルドレシピ
-        {
-          "name": "upLaTeX",
-          "tools": [
-            "Latexmk (upLaTeX)"
-          ]
-        },
         // LaTeX(pLaTeX) で書かれた文書のビルドレシピ
         {
           "name": "pLaTeX",
           "tools": [
             "Latexmk (pLaTeX)"
+          ]
+        },  
+        // LaTeX(upLaTeX) で書かれた文書のビルドレシピ
+        {
+          "name": "upLaTeX",
+          "tools": [
+            "Latexmk (upLaTeX)"
           ]
         },
     ],
@@ -57,6 +57,8 @@
         "*.aux", "*.bbl", "*.blg", "*.idx", "*.ind", "*.lof", "*.lot", "*.out", "*.toc", "*.acn", "*.acr", "*.alg", "*.glg", "*.glo", "*.gls", "*.ist", "*.fls", "*.log", "*.fdb_latexmk", "*.synctex.gz",
         // for Beamer files
         "_minted*", "*.nav", "*.snm", "*.vrb",
+        // for KUEE templeas
+        "*.fff",
     ],
 
     // latex-workshop.view.pdf.viewer: PDF ビューアの開き方
