@@ -8,14 +8,14 @@
 % \course{京都大学大学院情報学研究科}
 % \department{知能情報学専攻}
 \date{令和2年4月14日}
- 
+
 
 %%% 本文
 \begin{document}
 \maketitle			% 表題を出力
 \begin{eabstract}		% 英文要旨を出力
-This document briefly explains the usage of the \LaTeX{} style file
-for KUEE bacheler thesis and master thesis.
+  This document briefly explains the usage of the \LaTeX{} style file
+  for KUEE bacheler thesis and master thesis.
 \end{eabstract}
 \tableofcontents		% 目次を出力
 
@@ -39,10 +39,10 @@ for KUEE bacheler thesis and master thesis.
   \caption{配布キットのファイル一覧}\label{tab:kit}
   \begin{center}
     \begin{tabular}{ll}
-      \verb+kuee.cls+ & 修論$\cdot$卒論用 \LaTeX2e{} クラスファイル \\
+      \verb+kuee.cls+ & 修論$\cdot$卒論用 \LaTeX2e{} クラスファイル       \\
       \verb+kueethesis.bst+ & 修論$\cdot$卒論用 \JBibTeX{} 文献スタイルファイル \\
-      \verb+sample.tex+ & 使用の手引(このドキュメント)を作るファイル \\
-      \verb+sample.bib+ & 使用の手引の参考文献を収めたファイル \\
+      \verb+sample.tex+ & 使用の手引(このドキュメント)を作るファイル        \\
+      \verb+sample.bib+ & 使用の手引の参考文献を収めたファイル              \\
     \end{tabular}
   \end{center}
 \end{table}
@@ -61,7 +61,7 @@ kueethesis.bst} を，環境変数 {\ttfamily TEXINPUTS} で指定されたデ�
 {\ttfamily shuuron}，卒論の場合は {\ttfamily sotsuron} を用います．例
 えば，卒論の場合は次のように指定して下さい．
 \begin{quote}
-\begin{verbatim}
+  \begin{verbatim}
 \documentclass[sotsuron]{kuee}
 \end{verbatim}
 \end{quote}
@@ -74,7 +74,7 @@ kueethesis.bst} を，環境変数 {\ttfamily TEXINPUTS} で指定されたデ�
 り先に次のように指定します．これは，デフォルトと同じ1行36文字，1ページ
 32行の設定例です．
 \begin{quote}
-\begin{verbatim}
+  \begin{verbatim}
 \charsinline{36}
 \linesinpage{32}
 \end{verbatim}
@@ -88,13 +88,13 @@ kueethesis.bst} を，環境変数 {\ttfamily TEXINPUTS} で指定されたデ�
 
 \section{表紙}
 表紙は \verb+\maketitle+ コマンドによって出力されます\footnote{表紙ペー
-ジのページ番号は0ですが，出力されません．}．
+  ジのページ番号は0ですが，出力されません．}．
 
 表紙を出力するコマンド \verb+\maketitle+ よりも先に，タイトル(日本語お
 よび英語)，著者氏名(日本語および英語)などを次のように指定する必要があ
 ります．
 \begin{quote}
-\begin{verbatim}
+  \begin{verbatim}
 \title{\LaTeX を用いた修論$\cdot$卒論の執筆}
 \etitle{Usage of The \LaTeX{} Style File for KUEE}
 \author{電気 次郎}
@@ -114,7 +114,7 @@ kueethesis.bst} を，環境変数 {\ttfamily TEXINPUTS} で指定されたデ�
 定する場合は \verb+\department+ コマンドを，以下のように使用してくださ
 い．
 \begin{quote}
-\begin{verbatim}
+  \begin{verbatim}
 \course{京都大学大学院情報学研究科}
 \department{知能情報学専攻}
 \end{verbatim}
@@ -133,7 +133,7 @@ kueethesis.bst} を，環境変数 {\ttfamily TEXINPUTS} で指定されたデ�
 
 \section{本文}
 本文は通常の\LaTeX のテキストとして記述します\footnote{本文ページのペー
-ジ番号は1から始まり，アラビア数字で出力されます．}．
+  ジ番号は1から始まり，アラビア数字で出力されます．}．
 いくつかの点でj-report/jreport/reportスタイルとの違いがあります．
 
 \subsection{章題}
@@ -183,14 +183,14 @@ $^{\ddagger}$, \ldots のようになります．
 
 大量の図表を張り付けると，以下のようなエラーが発生することがあります．
 \begin{quote}
-\begin{verbatim}
+  \begin{verbatim}
 ! LaTeX Error: Too many unprocessed floats.
 \end{verbatim}
 \end{quote}
 \LaTeX が図表を組み版する時は，前後の文章の量を見ながらオプションで指
 定された条件に合う場所が出てくるまでメモリーに図表を保存しています。上
 記エラーは，図表が数ページにわたって連続して現われ，メモリーが不足する
-と発生します．このエラーが発生した時は，適当な位置に 
+と発生します．このエラーが発生した時は，適当な位置に
 \verb+\clearfigurepage+ コマンドを挿入してください．このコマンドは，図
 表ページを指定された個所で強制的に分割し，組版処理を行うように指示しま
 す．
@@ -214,7 +214,7 @@ $^{\ddagger}$, \ldots のようになります．
 以下のように \verb+\chapter+ コマンドの直後に \verb+\label+ コマンドを
 配置してラベルを宣言します．
 \begin{quote}
-\begin{verbatim}
+  \begin{verbatim}
 \chapter{はじめに}
 \label{chap:intro}
 \end{verbatim}
@@ -222,13 +222,13 @@ $^{\ddagger}$, \ldots のようになります．
 その上で，参照したい箇所に，\verb+\ref+ コマンドを以下のように配置しま
 す．
 \begin{quote}
-\begin{verbatim}
+  \begin{verbatim}
 \ref{chap:intro}章では，本利用説明書の位置づけについて述べています．
 \end{verbatim}
 \end{quote}
 \verb+\ref{chap:intro}+ は実際の章番号に置換されて，以下のように組版されます．
 \begin{quote}
-\ref{chap:intro}章では，本利用説明書の位置づけについて述べています．
+  \ref{chap:intro}章では，本利用説明書の位置づけについて述べています．
 \end{quote}
 詳しくは，本利用説明書内の利用例および，
 \LaTeX2e{}美文書作成入門\cite{GuideBook}の第10章などを参照してください．
@@ -236,8 +236,8 @@ $^{\ddagger}$, \ldots のようになります．
 
 \section{参考文献}
 参考文献は \verb+thebibliography+ 環境を用いて直接記述するか，
-\JBibTeX{} システムを用いて作成することができます\footnote{(J)\BibTeX 
-の使い方については \LaTeX ブック\cite{LaTeX}の付録Bなどを参照．}．参考
+\JBibTeX{} システムを用いて作成することができます\footnote{(J)\BibTeX
+  の使い方については \LaTeX ブック\cite{LaTeX}の付録Bなどを参照．}．参考
 文献のラベルは `[1]' のように出力されます．引用も同様に
 `[1]'のように出力されます．
 
@@ -247,7 +247,7 @@ $^{\ddagger}$, \ldots のようになります．
 以下のように{\ttfamily oldcite}を指定してください．
 
 \begin{quote}
-\begin{verbatim}
+  \begin{verbatim}
 \documentclass[oldcite]{kuee}
 \end{verbatim}
 \end{quote}
@@ -255,7 +255,7 @@ $^{\ddagger}$, \ldots のようになります．
 \section{付録}
 
 付録は \verb+\appendix+ コマンドの後に記述します\footnote{付録ページの
-ページ番号は本文から継続し，アラビア数字で出力されます．}．付録の各項
+  ページ番号は本文から継続し，アラビア数字で出力されます．}．付録の各項
 目は \verb+\chapter+ コマンドによって分割して記述します．付録がただ1項
 目からなる場合にも項目の始めに \verb+\chapter+ コマンドを用いて項目名
 を指定して下さい．
@@ -295,7 +295,7 @@ $^{\ddagger}$, \ldots のようになります．
 
   図表を論文の末尾に移動する方法について, {\ttfamily endfloat.sty} を
   参考にさせて頂きました．筆者の James Darrell McCauley さんに感謝しま
-  す．また，改造方法について \TeX{} FAQ 掲示板でアドバイスをくださった 
+  す．また，改造方法について \TeX{} FAQ 掲示板でアドバイスをくださった
   misc さんに感謝します．
 
   このクラスファイルの初期の版から現在の版に至るまで，各年度の長尾研究
@@ -320,20 +320,20 @@ $^{\ddagger}$, \ldots のようになります．
 \chapter{改版履歴}\label{chap:history}
 \begin{description}
   \item[1991年] 傳康晴\footnote{工学研究科\ 電子工学専攻 長尾研(当時)．
-	     現在，千葉大学．}が，\LaTeX{}209 用修論$\cdot$卒論スタイ
-	     ルファイル {\ttfamily kueethesis.sty} と文献用スタイルファ
-	     イル {\ttfamily kueethesis.bst} を作成\cite{OldTebiki}．
+          現在，千葉大学．}が，\LaTeX{}209 用修論$\cdot$卒論スタイ
+        ルファイル {\ttfamily kueethesis.sty} と文献用スタイルファ
+        イル {\ttfamily kueethesis.bst} を作成\cite{OldTebiki}．
   \item[2001年] 土屋雅稔\footnote{情報学研究科 知能情報学専攻 言語メディ
-	     ア研(当時)．現在，豊橋技術科学大学．{\ttfamily
-	     tsuchiya@tut.jp}}が，\LaTeX2e{} 用修論$\cdot$卒論クラスファ
-	     イル{\ttfamily kuee.cls} を作成\cite{Tebiki2004}．
-	     \newcounter{tsuaffil}
-	     \setcounter{tsuaffil}{\value{footnote}}
+        ア研(当時)．現在，豊橋技術科学大学．{\ttfamily
+        tsuchiya@tut.jp}}が，\LaTeX2e{} 用修論$\cdot$卒論クラスファ
+        イル{\ttfamily kuee.cls} を作成\cite{Tebiki2004}．
+        \newcounter{tsuaffil}
+        \setcounter{tsuaffil}{\value{footnote}}
   \item[2017年] 土谷亮\footnote{情報学研究科 通信情報システム専攻 小野
-	     寺研．現在，滋賀県立大学．{\ttfamily
-	     tsuchiya.a@e.usp.ac.jp}}が，参考文献の形式を改良．
+        寺研．現在，滋賀県立大学．{\ttfamily
+        tsuchiya.a@e.usp.ac.jp}}が，参考文献の形式を改良．
   \item[2018年] 土屋雅稔\footnotemark[\value{tsuaffil}]{}が，英文要旨
-	     に対応するためのコマンドを追加．
+        に対応するためのコマンドを追加．
 \end{description}
 
 
@@ -350,10 +350,10 @@ $^{\ddagger}$, \ldots のようになります．
       \verb+\textheight+ & 604pt \\ \hline
       \verb+\oddsidemargin+ & 0.5cm \\ \hline
       \verb+\evensidemargin+ & 0.5cm \\ \hline
-      \verb+\topmargin+ & 0pt \\ \hline
-      \verb+\headheight+ &12pt \\ \hline
-      \verb+\headsep+ & 25pt \\ \hline
-      \verb+\footskip+ & 30pt \\ \hline
+      \verb+\topmargin+ & 0pt   \\ \hline
+      \verb+\headheight+ & 12pt  \\ \hline
+      \verb+\headsep+ & 25pt  \\ \hline
+      \verb+\footskip+ & 30pt  \\ \hline
     \end{tabular}
   \end{center}
 \end{table}
@@ -363,14 +363,14 @@ $^{\ddagger}$, \ldots のようになります．
   \begin{center}
     \begin{tabular}{|l|r|}
       \hline
-      \verb+\textwidth+ & 424pt + 1cm \\ \hline
+      \verb+\textwidth+ & 424pt + 1cm  \\ \hline
       \verb+\textheight+ & 604pt + 67pt \\ \hline
-      \verb+\oddsidemargin+ & 0pt \\ \hline
-      \verb+\evensidemargin+ & 0pt \\ \hline
-      \verb+\topmargin+ & 0pt \\ \hline
-      \verb+\headheight+ & 0pt \\ \hline
-      \verb+\headsep+ & 0pt \\ \hline
-      \verb+\footskip+ & 0pt \\ \hline
+      \verb+\oddsidemargin+ & 0pt          \\ \hline
+      \verb+\evensidemargin+ & 0pt          \\ \hline
+      \verb+\topmargin+ & 0pt          \\ \hline
+      \verb+\headheight+ & 0pt          \\ \hline
+      \verb+\headsep+ & 0pt          \\ \hline
+      \verb+\footskip+ & 0pt          \\ \hline
     \end{tabular}
   \end{center}
 \end{table}
