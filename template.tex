@@ -1,26 +1,4 @@
-\documentclass[
-$if(fontsize)$
-  $fontsize$,
-$endif$
-$if(lang)$
-  $babel-lang$,
-$endif$
-$if(papersize)$
-  $papersize$paper,
-$endif$
-$if(beamer)$
-  ignorenonframetext,
-$if(handout)$
-  handout,
-$endif$
-$if(aspectratio)$
-  aspectratio=$aspectratio$,
-$endif$
-$endif$
-$for(classoption)$
-  $classoption$$sep$,
-$endfor$
-]{$documentclass$}
+\documentclass[sotsuron]{kuee}
 
 $if(beamer)$
 \newif\ifbibliography
@@ -40,10 +18,7 @@ $endif$
 % margins by default, and it is still possible to overwrite the defaults
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-% Set default figure placement to htbp
-\makeatletter
-\def\fps@figure{htbp}
-\makeatother
+
 
 \lstset{
     basicstyle=\ttfamily,
@@ -147,6 +122,7 @@ $endif$
 $endif$
 
 \begin{document}
+\maketitle
 $if(has-frontmatter)$
 \frontmatter
 $endif$
@@ -154,7 +130,6 @@ $if(title)$
 $if(beamer)$
 \frame{\titlepage}
 $else$
-\maketitle
 $endif$
 $if(abstract)$
 \begin{abstract}

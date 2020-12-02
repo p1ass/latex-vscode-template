@@ -1,18 +1,13 @@
 ---
-title: '\LaTeX を用いた修論$\cdot$卒論の執筆'
-author: 岸 直輝
-eauthor: Jiro Denki
-professor: 電気 太郎 教授
-# course: 京都大学大学院情報学研究科
-# department: 知能情報学専攻
-date: 令和2年4月14日
 header-includes:
-    - \title{\LaTeX を用いた修論$\cdot$卒論の執筆}
-    - \etitle{Usage of The \LaTeX{} Style File for KUEE}
+    - \title{LaTeX を用いた修論$\cdot$卒論の執筆}
+    - \etitle{Usage of The LaTeX Style File for KUEE}
+    - \author{岸 直輝}
     - \eauthor{Jiro Denki}
     - \professor{電気 太郎 教授}
     # - \course{京都大学大学院情報学研究科}
     # - \department{知能情報学専攻}
+    - \date{令和2年4月14日}
 include-before:
     - \begin{eabstract}This document briefly explains the usage of the\end{eabstract}
     - \def\lstlistingname{ソースコード}
@@ -43,7 +38,7 @@ adfa [@GuideBook, pp]
 
 ## インストール
 
-配布キットには，表~\ref{tab:kit} のファイルが含まれています．
+配布キットには，表 \ref{tab:kit} のファイルが含まれています．
 \begin{table}
   \caption{配布キットのファイル一覧}\label{tab:kit}
   \begin{center}
@@ -115,8 +110,8 @@ kueethesis.bst} を，環境変数 {\ttfamily TEXINPUTS} で指定されたデ�
 る時に用いられます．
 
 上記の例のように，研究科(学部)と専攻(学科)の指定を省略すると，修論作成
-時には，工学研究科~電気工学専攻が指定されたと見なされます．卒論作成時に
-は，工学部~電気電子工学科が指定されたと見なされます．
+時には，工学研究科 電気工学専攻が指定されたと見なされます．卒論作成時に
+は，工学部 電気電子工学科が指定されたと見なされます．
 
 研究科(学部)を指定する場合は \verb+\course+ コマンドを，専攻(学科)を指
 定する場合は \verb+\department+ コマンドを，以下のように使用してくださ
@@ -164,7 +159,7 @@ $^{\ddagger}$, \ldots のようになります．
 
 通常の \LaTeX を利用する場合と同様，本文中の適当な場所に記述して下さい．
 全ての図表は，\TeX によって自動的に論文の末尾に移動されます．例えば，
-図~\ref{fig:example} は，この段落の直後で定義されていますが，実際の整
+図 \ref{fig:example} は，この段落の直後で定義されていますが，実際の整
 形結果では論文末尾に移動しているはずです．
 
 \begin{figure}
@@ -336,7 +331,7 @@ BibTeX システムを用いて作成することができます\footnote{(J)Bib
 
 \chapter{レイアウト・パラメータ}\label{chap:layout}
 デフォルトで利用される本文ページ，図・表ページのレイアウト・パラメータ
-はそれぞれ表~\ref{tab:text},\ref{tab:fig} のようになっています．
+はそれぞれ表 \ref{tab:text},\ref{tab:fig} のようになっています．
 
 \begin{table}
   \caption{本文ページのデフォルト・レイアウト}\label{tab:text}
