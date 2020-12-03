@@ -26,14 +26,3 @@ latexmk sample.tex
 ```
 
 `sample.pdf`という実行ファイルができているはず。
-
-## マークダウンから書く場合
-
-```bash
-$ docker run -it --rm -v `pwd`:/workdir plass/mdtopdf bash
-$ apt-get install latexmk -y
-$ str=report.md
-$ pandoc -s -N ${str%.*}.md -o ${str%.*}.tex --pdf-engine=latexmk --pdf-engine-opt="-pdfdvi" \
- -F pandoc-crossref -F pandoc-citeproc  -M "crossrefYaml=/config/crossref_config.yaml" \
- --listings --template=template.tex   --top-level-division=chapter --toc &&  latexmk ${str%.*}.tex
-```
